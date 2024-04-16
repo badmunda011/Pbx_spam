@@ -3,7 +3,3 @@ cryptg
 heroku3
 pyrogram
 tgcrypto
-telegraph
-pyrogram==2.0.106
-aiohttp==3.9.3
-pillow==9.5.0
