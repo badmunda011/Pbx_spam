@@ -33,19 +33,20 @@ async def logs(legend):
         start = datetime.now()
         fetch = await legend.reply(f"✦ Fetching Logs...")
     
-        with open("SHUKLASPAMLogs.txt", "w") as logfile:
-            logfile.write("✦ SHUKLASPAM ⚡ [ Bot Logs ]\n\n" + logs)
+        with open("AltLogs.txt", "w") as logfile:
+            logfile.write("✦ XSPAM ⚡ [ Bot Logs ]\n\n" + logs)
 
         end = datetime.now()
         ms = (end-start).seconds
         await asyncio.sleep(1)
 
         try:
-            await X1.send_file(legend.chat_id, "SHUKLASPAMLogs.txt", caption=f"✦ **SHUKLASPAM BOT LOGS** ⚡\n\n● **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ ➥** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
+            await X1.send_file(legend.chat_id, "AltLogs.txt", caption=f"✦ **XSPAM BOT LOGS** ⚡\n\n● **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ ➥** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
             await fetch.delete()
         except Exception as e:
             await fetch.edit(f"✦ An Exception Occured, ERROR ➥ {str(e)}")
 
     elif legend.sender_id in SUDO_USERS:
-        await legend.reply("» sᴏʀʀʏ, ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.")
-                         
+        await legend.reply("✦ ꜱᴏʀʀʏ, ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.")
+
+ 
