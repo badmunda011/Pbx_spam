@@ -1,4 +1,4 @@
-# © @SHIVANSH474
+
 from telethon import __version__, events, Button
 
 from config import X1
@@ -6,14 +6,14 @@ from config import X1
 
 START_BUTTON = [
     [
-        Button.url("𝗔𝗗𝗗 𝗠𝗘 𝗕𝗔𝗕𝗬", "https://t.me/StrangerSpamProBot?startgroup=true")
+        Button.url("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", "https://t.me/avishaxbot?startgroup=true")
     ],
     [
-        Button.url("𝗦𝗨𝗣𝗣𝗢𝗥𝗧", "https://t.me/MASTIWITHFRIENDSXD"),
-        Button.url("𝗨𝗣𝗗𝗔𝗧𝗘𝗦", "https://t.me/SHIVANSH474")
+        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/ll_THE_BAD_BOT_ll"),
+        Button.url("ʀᴇᴘᴏ", "https://github.com/Badhacker98/BAD_SPAM_X/fork")
     ],
     [
-        Button.inline("𝗛𝗘𝗟𝗣 𝗔𝗡𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", data="help_back")
+        Button.inline("ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs", data="help_back")
     ]
 ]
 
