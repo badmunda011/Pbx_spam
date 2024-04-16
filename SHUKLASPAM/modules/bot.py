@@ -10,19 +10,20 @@ from datetime import datetime
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
+@X1.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 async def ping(e):
     if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         start = datetime.now()
-        altron = await e.reply(f"» ™°‌𝗦 𝗧 𝗥 𝗔 𝗡 𝗚 𝗘 𝗥")
+        altron = await e.reply(f"🐙")
         end = datetime.now()
         mp = (end - start).microseconds / 1000
-        await altron.edit(f"💫🥀 🫧 🇸𝗧 𝗥 𝗔 𝗡 𝗚 𝗘 𝗥\n» {mp} 𝙼𝚂")
+        await altron.edit(f"✦ ᴘɪɴɢ sᴛᴀᴛs ⏤͟͟͞͞★\n➥ `{mp} ᴍꜱ`")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
-        await e.reply(f"🥀ʀᴇsᴛᴀʀᴛɪɴɢ sᴛʀᴀɴɢᴇʀ ʙᴏᴛs🥀...")
+        await e.reply(f"✦ `ʀᴇsᴛᴀʀᴛɪɴɢ ʙᴏᴛ...`")
         try:
             await X1.disconnect()
         except Exception:
