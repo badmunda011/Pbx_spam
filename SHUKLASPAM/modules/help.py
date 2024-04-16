@@ -7,7 +7,6 @@ from config import X1, SUDO_USERS, CMD_HNDLR as hl
 HELP_STRING = "**✦ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ xsᴘᴀᴍ ʜᴇʟᴘ ⏤͟͟͞͞★**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @II_BAD_MUNDA_II @SHIVANSHDEVS**"
 
 HELP_BUTTON = [
-HELP_BUTTON = [
     [
         Button.inline("ꜱᴘᴀᴍ", data="spam"),
         Button.inline("ʀᴀɪᴅ", data="raid")
