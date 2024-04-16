@@ -7,18 +7,20 @@ from config import X1, SUDO_USERS, CMD_HNDLR as hl
 HELP_STRING = f"★ 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗕𝗢𝗧 𝗛𝗘𝗟𝗣 𝗠𝗘𝗡𝗨 ★\n\n» **ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @SHIVANSHDEVS**"
 
 HELP_BUTTON = [
+HELP_BUTTON = [
     [
-      Button.inline("𝗦𝗣𝗔𝗠", data="spam"),
-      Button.inline("𝗥𝗔𝗜𝗗", data="raid")
+        Button.inline("ꜱᴘᴀᴍ", data="spam"),
+        Button.inline("ʀᴀɪᴅ", data="raid")
     ],
     [
-      Button.inline("𝗘𝗫𝗧𝗥𝗔", data="extra")
+        Button.inline("ᴇxᴛʀᴀ", data="extra"),
+        Button.inline("ʙᴀᴅ ᴄᴏᴍᴍᴀɴᴅ", data="shukla")
     ],
     [
-      Button.url("𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛", "https://t.me/SHIVANSHDEVS"),
-      Button.inline("𝗡𝗘𝗪 𝗖𝗢𝗠𝗠𝗔𝗡𝗗", data="shukla")
+        Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/HEROKUBIN_01"),
+        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/ll_THE_BAD_BOT_ll")
     ]
-  ]
+]
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
@@ -150,17 +152,18 @@ async def helpback(event):
         await event.edit(
             HELP_STRING,
             buttons=[
-              [
-                Button.inline("𝗦𝗣𝗔𝗠", data="spam"),
-                Button.inline("𝗥𝗔𝗜𝗗", data="raid")
-              ],
-              [
-                Button.inline("𝗘𝗫𝗧𝗥𝗔", data="extra")
-              ],
-              [
-                Button.url("𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛", "https://t.me/SHIVANSHDEVS"),
-                Button.inline("𝗡𝗘𝗪 𝗖𝗢𝗠𝗠𝗔𝗡𝗗", data="shukla")
-              ]
+    [
+        Button.inline("ꜱᴘᴀᴍ", data="spam"),
+        Button.inline("ʀᴀɪᴅ", data="raid")
+    ],
+    [
+        Button.inline("ᴇxᴛʀᴀ", data="extra"),
+        Button.inline("ʙᴀᴅ ᴄᴏᴍᴍᴀɴᴅ", data="shukla")
+    ],
+    [
+        Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/HEROKUBIN_01"),
+        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/ll_THE_BAD_BOT_ll")
+    ]
             ]
           )
 
