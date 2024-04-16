@@ -1,4 +1,4 @@
-# © @SHIVANSH474
+
 from telethon import events, Button
 
 from config import X1, SUDO_USERS, CMD_HNDLR as hl
@@ -27,7 +27,7 @@ HELP_BUTTON = [
 async def help(event):
         try:
           await event.client.send_file(event.chat_id,
-              "https://telegra.ph/file/05522e13c97752efe5e75.png",
+              "https://graph.org/file/7a4a9eea38c1560741755.jpg",
               caption=HELP_STRING,
               buttons=HELP_BUTTON
               )
