@@ -4,7 +4,7 @@ from telethon import events, Button
 from config import X1, SUDO_USERS, CMD_HNDLR as hl
 
 
-HELP_STRING = "**✦ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ xsᴘᴀᴍ ʜᴇʟᴘ ⏤͟͟͞͞★**"
+HELP_STRING = "**✦ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ xsᴘᴀᴍ ʜᴇʟᴘ ⏤͟͟͞͞★**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @II_BAD_MUNDA_II**"
 
 HELP_BUTTON = [
 HELP_BUTTON = [
@@ -53,7 +53,7 @@ extra_msg = f"""
   2) {hl}𝚕𝚎𝚊𝚟𝚎 : 𝚃𝚢𝚙𝚎 𝚒𝚗 𝚝𝚑𝚛 𝙶𝚛𝚘𝚞𝚘 𝚋𝚘𝚝 𝚠𝚒𝚕𝚕 𝚊𝚞𝚝𝚘 𝚕𝚎𝚊𝚟𝚎 𝚝𝚑𝚊𝚝 𝚐𝚛𝚘𝚞𝚙 
 
 
-**© @SHIVANSHDEVS**
+**© @II_BAD_MUNDA_II**
 """
 
 
@@ -89,7 +89,7 @@ raid_msg = f"""
   2) {hl}𝚌𝚛𝚊𝚒𝚍 <𝚌𝚘𝚞𝚗𝚝> <𝚛𝚎𝚙𝚕𝚢 𝚝𝚘 𝚞𝚜𝚎𝚛>
 
 
-**© @SHIVANSHDEVS**💘
+**© @II_BAD_MUNDA_II**💘
 """
 
 shukla_msg = f"""
@@ -124,7 +124,7 @@ shukla_msg = f"""
   2) {hl}𝚋𝚜𝚙𝚊𝚖 <𝚌𝚘𝚞𝚗𝚝> <𝚛𝚎𝚙𝚕𝚢 𝚝𝚘 𝚞𝚜𝚎𝚛>
 
 
-**© @SHIVANSHDEVS**💘
+**© @II_BAD_MUNDA_II**💘
 """
 
 spam_msg = f"""
@@ -143,7 +143,7 @@ spam_msg = f"""
 💖 𝗔𝗯𝘂𝘀𝗲𝗦𝗽𝗮𝗺: **🌺ᴏɴᴇ ᴡᴏʀᴅ ʙɪɢ ɢᴀᴀʟɪ sᴘᴀᴍ🌺**
   1) {hl}𝚊𝚋𝚞𝚜𝚎 <𝚌𝚘𝚞𝚗𝚝> <𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎>
   
-** © @SHIVANSHDEVS**
+** © @II_BAD_MUNDA_II**
 """                     
 
 
