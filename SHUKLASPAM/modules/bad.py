@@ -7,7 +7,7 @@ from telethon import events
 from pyrogram import enums
 
 from config import X1, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
-from SHUKLASPAM.data import PRAID
+from SHUKLASPAM.data import PRAID, SHASHANK
 
 PREPLY_RAID = []
 
@@ -57,7 +57,48 @@ async def dpraid(e):
             global PREPLY_RAID
             if check in PREPLY_RAID:
                 PREPLY_RAID.remove(check)
-            await e.reply("✦ ʜɪɴᴅɪ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ ✅")
+            await e.reply("✦ ᴘʙɪ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ ✅")
         except NameError:
             await e.reply(f"❖ 𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 ⏤͟͟͞͞★\n\n● 𝐃𝐩𝐛𝐢 𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝 ➥ {hl}dpraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n● {hl}dpraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+
+
+@X1.on(events.NewMessage(incoming=True))
+async def _(event):
+    global PREPLY_RAID
+    check = f"{event.sender_id}_{event.chat_id}"
+    if check in PREPLY_RAID:
+        await asyncio.sleep(0.1)
+        await event.client.send_message(
+            entity=event.chat_id,
+            message="""{}""".format(choice(PRAID)),
+            reply_to=event.message.id,
+        )
+
+@X1.on(events.NewMessage(incoming=True, pattern=r"\%sprraid(?: |$)(.*)" % hl))
+async def prraid(e):
+    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
+        mkrr = e.text.split(" ", 1)
+        if len(mkrr) == 2:
+            entity = await e.client.get_entity(mkrr[1])
+
+        elif e.reply_to_msg_id:             
+            a = await e.get_reply_message()
+            entity = await e.client.get_entity(a.sender_id)
+
+        try:
+            user_id = entity.id
+            if user_id in SHASHANK:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ✨🥀")
+            elif user_id == OWNER_ID:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ🥀")
+            elif user_id in SUDO_USERS:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ✨")
+            else:
+                global PREPLY_RAID
+                check = f"{user_id}_{e.chat_id}"
+                if check not in PREPLY_RAID:
+                    PREPLY_RAID.append(check)
+                await e.reply("✦ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘʙɪ ʀᴇᴘʟʏʀᴀɪᴅ ✅")
+        except NameError:
+            await e.reply(f"❖ 𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 ⏤͟͟͞͞★\n\n● 𝐏𝐛𝐢 𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝 ➥ {hl}prraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n● {hl}prraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
              
