@@ -15,7 +15,7 @@ PREPLY_RAID = []
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%spraid(?: |$)(.*)" % hl))
 async def praid(e):
-     if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
+    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         xraid = e.text.split(" ", 2)
 
         if len(xraid) == 3:
@@ -28,16 +28,23 @@ async def praid(e):
             uid = entity.id
 
         try:
-            first_name = entity.first_name
-            counter = int(xraid[1])
-            username = f"[{first_name}](tg://user?id={uid})"
-            for _ in range(counter):
-                reply = choice(PRAID)
-                caption = f"❖ {username} {reply}"
-                await e.client.send_message(e.chat_id, caption)
-                await asyncio.sleep(0.1)
+            if uid in SHASHANK:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ✨🥀")
+            elif uid == OWNER_ID:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ🥀")
+            elif uid in SUDO_USERS:
+                await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ✨")
+            else:
+                first_name = entity.first_name
+                counter = int(xraid[1])
+                username = f"[{first_name}](tg://user?id={uid})"
+                for _ in range(counter):
+                    reply = choice(PRAID)
+                    caption = f"❖ {username} {reply}"
+                    await e.client.send_message(e.chat_id, caption)
+                    await asyncio.sleep(0.1)
         except (IndexError, ValueError, NameError):
-            await e.reply(f"❖ 𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 ⏤͟͟͞͞★\n\n● 𝐏𝐫𝐚𝐢𝐝 𝐒𝐩𝐚𝐦 ➥ {hl}praid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n● {hl}praid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+            await e.reply(f"❖ 𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 ⏤͟͟͞͞★\n\n● 𝐏𝐫𝐚𝐢𝐝 ➥ {hl}praid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n● {hl}praid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
 
