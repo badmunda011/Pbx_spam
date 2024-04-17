@@ -6,7 +6,7 @@ from config import X1
 
 START_BUTTON = [
     [
-        Button.url("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", "https://t.me/avishaxbot?startgroup=true")
+        Button.url("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", "https://t.me/PbxSpam_Bot?startgroup=true")
     ],
     [
         Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/ll_THE_BAD_BOT_ll"),
